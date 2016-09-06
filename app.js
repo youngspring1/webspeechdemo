@@ -5,7 +5,10 @@ var content = document.getElementById('content');
 var speech = new webkitSpeechRecognition();
 
 //言語を日本語に設定
-speech.lang = "zh";
+//speech.lang = "en";
+speech.lang = "jp";
+//speech.lang = "zh";
+
 
 //ボタンクリックで認識開始
 btn.addEventListener('click', function() {
