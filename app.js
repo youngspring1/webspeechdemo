@@ -1,11 +1,17 @@
 var btn = document.getElementById('btn');
 var content = document.getElementById('content');
+var selectLang = document.getElementById('language');
 
 //音声認識APIの使用
 var speech = new webkitSpeechRecognition();
 
 //言語を日本語に設定
 speech.lang = "ja";
+
+//言葉を変更して、langに格納
+selectLang.addEventListener('change', function(){
+	speech.lang = this.value;
+});
 
 //ボタンクリックで認識開始
 btn.addEventListener('click', function() {
